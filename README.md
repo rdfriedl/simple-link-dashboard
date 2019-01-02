@@ -1,6 +1,6 @@
 # simple-link-dashboard
 
-![screenshot.png]
+![screenshot](./screenshot.png)
 
 ## backgroundUrl
 
