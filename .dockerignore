@@ -1,0 +1,8 @@
+.idea
+.env
+.git
+*Dockerfile*
+*docker-compose*
+*docker-stack*
+node_modules
+config.example.json

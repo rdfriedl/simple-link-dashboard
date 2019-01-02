@@ -1,0 +1,53 @@
+doctype html
+html.h-100
+	head
+		title #{title}
+		link(
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+			crossorigin="anonymous"
+		)
+		link(
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+			crossorigin="anonymous"
+		)
+		link(
+			rel="stylesheet"
+			href=`https://bootswatch.com/4/${theme || "minty"}/bootstrap.min.css`
+		)
+		meta(
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		)
+
+body.h-100(style={
+	"background-image": `url(${backgroundUrl || "https://via.placeholder.com/1600x900"})`,
+	"background-position": "center",
+	"background-repeat": "no-repeat",
+	"background-size": "cover"
+})
+	.container.h-100
+		.row
+			.col-sm
+				.card.m-4
+					.card-body
+						h1.text-center= title
+						each link in links
+							a.btn.btn-lg.m-2(
+								href=link.url
+								class=`btn-${link.buttonType || "info"}`+(link.class || "")
+								title=link.name
+							)
+								if link.icon
+									i(
+										alt=link.alt
+										class=link.icon
+										style={ "font-size": iconSize || "2rem" }
+									)
+								else if link.image
+									img(
+										src=link.image
+										alt=link.alt
+										style={ width: iconSize || "2rem", height: iconSize || "2rem" }
+									)
