@@ -6,4 +6,5 @@
 *docker-stack*
 node_modules
 config.example.json
+config.example.yml
 screenshot.png

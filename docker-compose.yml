@@ -10,22 +10,16 @@ services:
     #      - path/to/config.json:/config.json
     environment:
       CONFIG: |
-        {
-          "title": "Example Dashboard",
-          "theme": "minty",
-          "backgroundUrl": "https://source.unsplash.com/random/?circuit%20board",
-          "iconSize": "3rem",
-          "links": [
-            {
-              "name": "an example domain",
-              "icon": "fas fa-home",
-              "url": "http://example.com",
-              "buttonType": "dark"
-            },
-            {
-              "name": "Home Assistant",
-              "image": "https://d33wubrfki0l68.cloudfront.net/075995fe17a5351e2699b2dd878652ec4f1d8654/8bfdd/demo/favicon-192x192.png",
-              "url": "https://www.home-assistant.io/"
-            }
-          ]
-        }
+        ---
+        title: Example Dashboard
+        theme: minty
+        backgroundUrl: https://source.unsplash.com/random/?circuit%20board
+        iconSize: 3rem
+        links:
+          - name: an example domain
+            icon: fas fa-home
+            url: http://example.com
+            buttonType: dark
+          - name: Home Assistant
+            image: https://d33wubrfki0l68.cloudfront.net/075995fe17a5351e2699b2dd878652ec4f1d8654/8bfdd/demo/favicon-192x192.png
+            url: https://www.home-assistant.io/
